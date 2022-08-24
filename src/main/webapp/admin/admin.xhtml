@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:f="http://xmlns.jcp.org/jsf/core"
+	  xmlns:h="http://xmlns.jcp.org/jsf/html"	
+	  xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+	  <!-- Création des bibliothèques pour affichage en xml -->
+	  <f:view>
+	  	<h:head>
+	  	
+	  	</h:head>
+	  	<h:body>
+	  		<h1>  			
+	  			<h:outputText value="Bienvenue sur la page Admin"/>
+	  			<br />
+	  			<h:outputText value="Bonjour #{loginBean.login}"/>
+	  			<br />
+	  			<h:outputText value="Pour information, la page ADMIN est codée dans l'ANCIENNE version, SANS ui:composition "/>
+	  			
+	  		</h1>
+	  		<nav>	
+	  		
+	  			<h:form>
+	  				<h:commandLink action="#{routeBean.page}" value="LOGIN2" >
+	  					<f:param name="pageId" value="login"></f:param>
+	  				 </h:commandLink>		
+				</h:form>
+				<br/>
+				<h:form>
+	  				<h:commandButton action="#{routeBean.page}" value="INDEX2" >
+	  					<f:param name="pageId" value="index"></f:param>
+	  				 </h:commandButton>		
+				</h:form>
+
+	  		</nav>
+	  		
+	  	</h:body>
+	  </f:view>
+	  
+</html>

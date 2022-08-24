@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_3.xsd"
+    version="2.3">
+
+	<!-- Gestion navigation liée à login -->
+	<navigation-rule>
+		<!-- <from-view-id>/pages/login.xhtml</from-view-id> -->
+        <from-view-id>*</from-view-id> <!-- rules communes à TOUTES les pages... -->
+         <navigation-case>
+            <from-outcome>index</from-outcome>
+            <!-- Renvoi sur vue en cas de succès -->
+            <to-view-id>/index.xhtml</to-view-id>
+            <redirect/> <!-- FORCE le changement de URL -->
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>login</from-outcome>
+            <!-- Renvoi sur vue en cas de succès -->
+            <to-view-id>/pages/login.xhtml</to-view-id>
+            <redirect/> <!-- FORCE le changement de URL -->
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>about</from-outcome>
+            <!-- Renvoi sur vue en cas de succès -->
+            <to-view-id>/pages/about.xhtml</to-view-id>
+            <redirect/> <!-- FORCE le changement de URL -->
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>success</from-outcome>
+            <!-- Renvoi sur vue en cas de succès -->
+            <to-view-id>/pages/about.xhtml</to-view-id>
+            <redirect/> <!-- FORCE le changement de URL -->
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>failed</from-outcome>
+            <to-view-id>/pages/failed.xhtml</to-view-id>
+        	<redirect/>
+        </navigation-case>
+    	<navigation-case>
+            <from-outcome>admin</from-outcome>
+            <to-view-id>/admin/admin.xhtml</to-view-id>
+        	<redirect/>
+        </navigation-case>
+    </navigation-rule>
+    
+</faces-config>

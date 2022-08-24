@@ -1,0 +1,19 @@
+<ui:composition 
+	template="../templates/principal.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+>
+                
+       
+    <ui:define name="titre">
+    	<h:outputText value="About Page"/>
+    </ui:define>
+  
+    
+    <ui:define name="main">
+   		<h:outputText value="Bonjour #{loginBean.login}"/>
+	</ui:define>
+</ui:composition>
+
